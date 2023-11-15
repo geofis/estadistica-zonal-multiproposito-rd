@@ -14,12 +14,12 @@
   \node (start) [startstop] {Estadística zonal \\ multipropósito};
   \node (instalar) [process, right of=start, xshift=4cm] {Instalar lenguajes de \\ programación \\ y librerías \\ (e.g. \textsf{ee, geemap})};
   \node (autenticar) [process, right of=instalar, xshift=4cm] {EE: \\ Crear proyecto \\ autenticar};
-   \node (fuente) [io, right of=autenticar, xshift=4cm] {\textbf{Seleccionar/subir} \\ \textbf{fuente de datos en EE}};
+   \node (fuente) [io, right of=autenticar, xshift=4cm] {\textbf{Seleccionar/subir} \\ \textbf{fuente de datos en EE} \\ (catálogo/datos propios)};
+
    \node (representarfuente) [io, below of=fuente, yshift=-2cm] {\textbf{Representar fuente,} \\ \textbf{explorar valores}};
-
-
-   \node (zonas) [io, left of=representarfuente, xshift=-4cm] {Seleccionar/subir \\ zonas \\ (eg.H3))};
-  \node (end) [startstop, left of=zonas, xshift=-4cm] {\textbf{Repositorio de} \\ \textbf{Estadística zonal} \\ \textbf{multipropósito}};
+   \node (zonas) [io, left of=representarfuente, xshift=-4cm] {Seleccionar/subir \\ zonas (eg.H3, cuencas)};
+   \node (reducer) [io, left of=zonas, xshift=-4cm] {\textbf{Aplicar \textit{reducer}} \\ \textbf{(estadística zonal} \\ \textbf{y exportar)}};
+  \node (end) [startstop, left of=reducer, xshift=-4cm] {\textbf{Repositorio de} \\ \textbf{Estadística zonal} \\ \textbf{multipropósito}};
 
   % Arrows
   \draw [arrow] (start) -- (instalar);
@@ -27,7 +27,8 @@
   \draw [arrow] (autenticar) -- (fuente);
   \draw [arrow] (fuente) -- (representarfuente);
   \draw [arrow] (representarfuente) -- (zonas);
-  \draw [arrow] (zonas) -- (end);
+  \draw [arrow] (zonas) -- (reducer);
+  \draw [arrow] (reducer) -- (end);
 
 \end{tikzpicture}
 \end{document}

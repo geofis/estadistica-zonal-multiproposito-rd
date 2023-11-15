@@ -23,11 +23,12 @@ ruta_figuras <- 'img/'
 # JUSTIFICACIÓN
 
 ## 
-<section style="font-size: 72px; text-align: center;">
 
-"Quienes nos 'criamos' en la era del *apuñaleo*, sufrimos con la sequía de fuentes de información. Nos marcó, y aún no superamos el trauma. Esto lo justifica todo, *bye*"
+<big>
 
-</section>
+"Quienes nos 'criamos' en la era del *apuñaleo* (~ 80s-90s), sufrimos una prolongada 'sequía' de fuentes de información. Nos marcó, y aún no superamos el trauma. Esto lo justifica todo. *Fin*"
+
+</big>
 
 ##
 
@@ -35,13 +36,31 @@ ruta_figuras <- 'img/'
 
 - Si encima necesitamos consultar **métodos, metadatos o informes técnicos**, la cosa se complica aún más.
 
-- Aunque la reproducibilidad se exige cada día más en estudios a nivel global, cuando utilizamos fuentes de datos nacionales, **se nos dificulta encontrar protocolos reproducibles**.
+## 
+
+- Aunque la reproducibilidad se exige cada día más en estudios a nivel global, con fuentes de datos nacionales **es difícil encontrar protocolos reproducibles**.
+
+- Aún cuando dispongamos de fuentes de datos localmente, obtener estadísticos zonales, requiere de **ingentes capacidades de cómputo** que superan las capacidades de una PC común.
+
+- Paradójicamente, las **plataformas globales** de información geoespacial, superan algunas de estas limitaciones.
 
 ##
 
 - Este artículo de datos pretende llenar ese vacío.
 
 - El objetivo consiste en poner **a disposición del público, un artículo de datos reproducible y actualizable**, que contenga **información geográfica** de República Dominicana, agrupada en **unidades territoriales** de distinto tamaño o forma por medio de estadística zonal, útil para realizar **análisis espacial multipropósito**.
+
+## 
+
+|||
+|:----:|:-|
+|![](img/repo-github-captura.jpg)|![](img/repo-github-qr.png)|
+
+https://github.com/geofis/zonal-statistics/
+
+## ¿Qué es la estadística zonal?
+
+Es una **técnica**, propia de los sistemas de información geográfica y del análisis espacial, utilizada para **extraer estadísticos** (e.g. media, varianza, moda) de **variables territoriales por áreas específicas** para entender patrones y cambios dentro de dichas regiones.
 
 # MATERIALES Y MÉTODOS
 
@@ -57,47 +76,121 @@ cd ..
 
 ## ¿Qué es Google Earth Engine?
 
-- Es una **plataforma de análisis geoespacial en la nube que ofrece una extensa base de datos del orden de los petabytes**, para monitorear y analizar cambios en la superficie de la Tierra, apoyando investigaciones ambientales, manejo de recursos y planificación territorial.
+- Es una **plataforma de análisis geoespacial en la nube que ofrece un extenso catálogo del orden de los petabytes**, para monitorear y analizar cambios en la superficie de la Tierra, apoyando investigaciones ambientales, manejo de recursos y planificación territorial.
 
-- Utiliza la infraestructura de computación en la nube de Google para procesar y almacenar esta gran cantidad de información geoespacial.
+- Utiliza la **infraestructura de computación** en la nube de Google para procesar y almacenar esta gran cantidad de información geoespacial.
 
-- El acceso a Google Earth Engine es gratuito para fines de investigación, educación y uso sin fines de lucro.
+- El **acceso a Google Earth Engine es gratuito** para fines de investigación, educación y uso sin fines de lucro.
 
-- Hay otras del mismo orden, como la Microsoft Planetary Computer.
+- Hay otras del mismo orden, como la **Microsoft Planetary Computer**.
+
+## ![](img/ee-captura.jpg)
+
+
 
 ## ![](img/repo-zonal-statistics.png)
 
 
-## CASOS DE USO
+## OTROS CASOS DE USO, ADEMÁS DEL RÍO MASACRE
+
+- Asignatura biogeografía: GBIF, campus UASD
+
+- Asignatura geomorfología
+
+- Criterios para la selección de sitios de estaciones meteoclimáticas
+
+- Provincias de República Dominicana
+
+## Para la cuenca del río Masacre o Dajabón
+
+- Para aplicar técnicas de estadísticas zonal a la cuenca y sus distintas porciones, dominicana y haitiana, **se necesitaba, por supuesto, la cuenca y sus partes**.
+
+- La delimitación de la cuenca se realizó con algoritmos de **hidrología computacional**.
+
+- No solamente se delimitó, sino que también se realizó una **caracterización morfométrica**.
+
+##
+
+|                                                  |                             |
+|:------------------------------------------------:|:---------------------------:|
+| ![](img/repo-github-hidrografia-captura.jpg){width="100%"} | ![](img/repo-github-hidrografia-qr.png) |
 
 
-## Asignatura biogeografía: GBIF, campus UASD
+## ![](img/cuencas-ordenes-todas-captura-masacre-destacado.jpg)
 
+## ![](img/cuencas-proporciones.jpg)
 
-## Asignatura geomorfología
+## ![](img/red-curso-mas-largo.jpg)
 
+<small>El curso más largo tiene unos 72 km, y se remonta cerca del cerro Pico del Gallo (c. de Burén).</small>
 
-## Criterios para la selección de sitios de estaciones meteoclimáticas
+## ![](img/tramos-compartidos-sobre-el-curso-denominado-masacre-o-dajabon.jpg){width=75%}
 
+<small>Tramos compartidos sobre el curso denominado río Masacre o Dajabón.</small>
 
-## Provincias de República Dominicana
+## ![](img/frontera-de-masacre-a-capotillo.jpg)
 
+## ![](img/morfometria-variables-de-redes-segun-ordenes.png)
+
+## ![](img/morfometria-cuencas-subcuencas-areas-ordenes.png)
+
+## ![](img/morfometria-cuencas-subcuencas-areas-ordenes-boxplot.png)
+
+## ![](img/morfometria-redes-ordenes.jpg){width=75%}
 
 # RESULTADOS
 
-## Cuenca del río Masacre o Dajabón
+## ![](img/esa-worldcover-ee-captura.jpg){width=85%}
 
+<small>
+https://developers.google.com/earth-engine/datasets/catalog/ESA_WorldCover_v200
+ESA/VITO/Brockmann Consult/CS/GAMMA Remote Sensing/IIASA/WUR
+</small>
+
+## ![](img/barras-apiladas-esa-worldcover.jpg)
+
+## ![](img/copernicus-globcover-ee-captura.jpg){width=85%}
+
+<small>
+https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_Landcover_100m_Proba-V-C3_Global
+Programa Copernicus
+</small>
+
+## ![](img/barras-apiladas-copernicus-globcover.jpg)
+
+## ![](img/hansen-global-forest-change-ee-captura.jpg){width=75%}
+
+<small>
+https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2022_v1_10
+Hansen/UMD/Google/USGS/NASA
+</small>
+
+## ![](img/barras-apiladas-hansen-global-forest-change.jpg)
 
 
 # DISCUSIÓN
 
-- El concepto de "*global*"
+
+##
+
+- Se generó una **base de información geoespacial de República Dominicana disponible al público, reproducible y actualizable**, agrupada en **unidades territoriales** por medio de estadística zonal, con la cual se ha respondido eficientemente a necesidades de **análisis espacial** en distintos ámbitos, entre ellos la cuenca del río Masacre o Dajabón.
+
+- **Los porcentajes de cobertura arbórea de la parte dominicana y la haitiana, no difieren significativamente**.
+
+##
+
+- La limitación más relevante del estudio es que las "*fuentes de datos globales*", aunque son buenas desde el punto de vista de la **consistencia y de su potencial para realizar comparaciones**, ignoran las particularidades de lo local, tanto en lo referente al medio físico, como en lo atinente a lo institucional y lo social.
+
+##
+
+Posibilidades de estudios futuros y espacios de mejora:
 
 - Potencial de utilizar herramientas de IA muy potentes, como SAM.
 
 - Futuros trabajos:
 
     - Automatización de procesos.
+    
     - Aplicaciones web.
 
 # 
